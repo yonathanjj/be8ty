@@ -455,7 +455,7 @@ class FooterComponent extends HTMLElement {
       <footer class="footer">
         <div class="footer-container">
           <div class="footer-brand">
-            <h2 class="footer-logo">BeCity</h2>
+            <h2 class="footer-logo">Be8ty</h2>
             <p class="footer-tagline">Weaving DNA into every thread since 2015.</p>
             <div class="footer-socials">
               <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
