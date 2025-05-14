@@ -1,0 +1,366 @@
+/* Luxury Contact Page Styles */
+.contact-page {
+    color: #1a1a1a;
+    font-family: 'Neue Haas Grotesk Display Pro', 'Inter', sans-serif;
+}
+
+/* Hero Section */
+.contact-hero {
+    height: 60vh;
+    background: url('8.png') center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 2rem;
+}
+
+.contact-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    font-weight: 300;
+    letter-spacing: 3px;
+    opacity: 0.9;
+}
+
+/* Contact Grid */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1400px;
+    margin: 5rem auto;
+    padding: 0 2rem;
+    gap: 4rem;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 3rem;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 50px;
+    height: 1px;
+    background: #1a1a1a;
+}
+
+/* Luxury Form */
+.luxury-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem 0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #d9d9d9;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #1a1a1a;
+    transition: all 0.3s ease;
+}
+
+.form-group select {
+    appearance: none;
+    -webkit-appearance: none;
+    position: relative;
+    background: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>") no-repeat;
+    background-position: right center;
+}
+
+.form-group textarea {
+    resize: none;
+    min-height: 100px;
+}
+
+.form-group label {
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    font-size: 0.9rem;
+    color: #999;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-group .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #1a1a1a;
+    transition: width 0.4s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus,
+.form-group input:not(:placeholder-shown),
+.form-group select:not(:placeholder-shown),
+.form-group textarea:not(:placeholder-shown) {
+    outline: none;
+    border-bottom-color: transparent;
+}
+
+.form-group input:focus ~ .underline,
+.form-group select:focus ~ .underline,
+.form-group textarea:focus ~ .underline,
+.form-group input:not(:placeholder-shown) ~ .underline,
+.form-group select:not(:placeholder-shown) ~ .underline,
+.form-group textarea:not(:placeholder-shown) ~ .underline {
+    width: 100%;
+}
+
+.form-group input:focus ~ label,
+.form-group select:focus ~ label,
+.form-group textarea:focus ~ label,
+.form-group input:not(:placeholder-shown) ~ label,
+.form-group select:not(:placeholder-shown) ~ label,
+.form-group textarea:not(:placeholder-shown) ~ label {
+    transform: translateY(-1.5rem) scale(0.85);
+    color: #1a1a1a;
+}
+
+/* Submit Button */
+.submit-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    color: #1a1a1a;
+    border: 1px solid #1a1a1a;
+    padding: 1rem 1.5rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 200px;
+    margin-top: 1rem;
+}
+
+.submit-btn .arrow-icon {
+    transition: transform 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #1a1a1a;
+    color: #fff;
+}
+
+.submit-btn:hover .arrow-icon {
+    transform: translateX(5px);
+}
+
+/* Contact Info */
+.contact-info-container {
+    padding-left: 2rem;
+    border-left: 1px solid #e6e6e6;
+}
+
+.info-section {
+    margin-bottom: 3rem;
+}
+
+.info-title {
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.info-item {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.info-item i {
+    font-size: 1.2rem;
+    margin-top: 0.3rem;
+}
+
+.info-item h4 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+
+.info-item p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+.hours {
+    font-size: 0.8rem;
+    color: #999;
+    margin-top: 0.3rem;
+}
+
+.appointment-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.boutique-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    text-decoration: none;
+    transition: gap 0.3s ease;
+}
+
+.boutique-btn:hover {
+    gap: 1rem;
+}
+
+/* Social Section */
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-links a {
+    color: #1a1a1a;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+}
+
+/* Map Section */
+.map-section {
+    position: relative;
+    height: 500px;
+    margin-top: 5rem;
+}
+
+.map-container {
+    width: 100%;
+    height: 100%;
+    background: #f5f5f5;
+}
+
+.map-overlay {
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+    background: rgba(255,255,255,0.9);
+    padding: 2rem;
+    max-width: 300px;
+}
+
+.map-overlay h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.map-overlay p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.directions-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    color: #1a1a1a;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: gap 0.3s ease;
+}
+
+.directions-link:hover {
+    gap: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .contact-info-container {
+        padding-left: 0;
+        border-left: none;
+        padding-top: 3rem;
+        border-top: 1px solid #e6e6e6;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .map-overlay {
+        left: 1.5rem;
+        bottom: 1.5rem;
+        padding: 1.5rem;
+    }
+}

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | BeCity</title>
+    <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro" rel="stylesheet">
+</head>
+<body class="shop-page">
+<navbar-component></navbar-component>
+
+
+<main>
+    <!-- Hero -->
+    <section class="shop-hero">
+        <div class="hero-overlay"></div>
+        <h1 class="nexa-light">Curated Collections</h1>
+        <p>Seasonless designs for the modern wardrobe</p>
+    </section>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+        <div class="filter-group">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="women">Women</button>
+            <button class="filter-btn" data-category="men">Men</button>
+            <button class="filter-btn" data-category="accessories">Accessories</button>
+        </div>
+        <div class="sort-group">
+            <select id="sort-by" class="luxury-select">
+                <option value="featured">Featured</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="newest">New Arrivals</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="product-grid">
+        <!-- Product 1 -->
+        <div class="product-card" data-category="women" data-price="289" data-date="2023-10-15">
+            <div class="product-image" style="background-image: url('1.png')">
+                <span class="badge">New</span>
+                <button class="quick-view">Quick View</button>
+            </div>
+            <div class="product-info">
+                <h3>Silk Chiffon Blouse</h3>
+                <p class="price">$289</p>
+                <div class="color-options">
+                    <span class="color-dot" style="background: #E6D5C3"></span>
+                    <span class="color-dot" style="background: #1A1A1A"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="women" data-price="289" data-date="2023-10-15">
+            <div class="product-image" style="background-image: url('1.png')">
+                <span class="badge">New</span>
+                <button class="quick-view">Quick View</button>
+            </div>
+            <div class="product-info">
+                <h3>Silk Chiffon Blouse</h3>
+                <p class="price">$289</p>
+                <div class="color-options">
+                    <span class="color-dot" style="background: #E6D5C3"></span>
+                    <span class="color-dot" style="background: #1A1A1A"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="women" data-price="289" data-date="2023-10-15">
+            <div class="product-image" style="background-image: url('1.png')">
+                <span class="badge">New</span>
+                <button class="quick-view">Quick View</button>
+            </div>
+            <div class="product-info">
+                <h3>Silk Chiffon Blouse</h3>
+                <p class="price">$289</p>
+                <div class="color-options">
+                    <span class="color-dot" style="background: #E6D5C3"></span>
+                    <span class="color-dot" style="background: #1A1A1A"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="women" data-price="289" data-date="2023-10-15">
+            <div class="product-image" style="background-image: url('1.png')">
+                <span class="badge">New</span>
+                <button class="quick-view">Quick View</button>
+            </div>
+            <div class="product-info">
+                <h3>Silk Chiffon Blouse</h3>
+                <p class="price">$289</p>
+                <div class="color-options">
+                    <span class="color-dot" style="background: #E6D5C3"></span>
+                    <span class="color-dot" style="background: #1A1A1A"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Repeat 7 more product cards with different data attributes -->
+    </div>
+</main>
+
+<!-- Product Modal -->
+<div class="product-modal" id="productModal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+        <button class="close-modal">&times;</button>
+        <div class="modal-gallery">
+            <div class="main-image" style="background-image: url('product-1.jpg')"></div>
+            <div class="thumbnail-container">
+                <div class="thumbnail active" style="background-image: url('product-1.jpg')"></div>
+                <div class="thumbnail" style="background-image: url('product-1-alt.jpg')"></div>
+                <div class="thumbnail" style="background-image: url('product-1-detail.jpg')"></div>
+            </div>
+        </div>
+        <div class="modal-details">
+            <h2>Silk Chiffon Blouse</h2>
+            <p class="price">$289</p>
+            <p class="description">Crafted from 100% mulberry silk with hand-finished French seams. Delicate mother-of-pearl buttons.</p>
+
+            <div class="size-selector">
+                <h4>Size</h4>
+                <div class="sizes">
+                    <span class="size">XS</span>
+                    <span class="size">S</span>
+                    <span class="size active">M</span>
+                    <span class="size">L</span>
+                    <span class="size">XL</span>
+                </div>
+                <a href="#" class="size-guide">Size Guide</a>
+            </div>
+
+            <div class="color-selector">
+                <h4>Color</h4>
+                <div class="colors">
+                    <span class="color active" style="background: #E6D5C3"></span>
+                    <span class="color" style="background: #1A1A1A"></span>
+                </div>
+            </div>
+
+            <div class="quantity-selector">
+                <h4>Quantity</h4>
+                <div class="qty-controls">
+                    <button class="qty-minus">-</button>
+                    <span class="qty">1</span>
+                    <button class="qty-plus">+</button>
+                </div>
+            </div>
+
+            <button class="add-to-bag">Add to Bag</button>
+            <button class="wishlist-btn"><i class="far fa-heart"></i> Save for Later</button>
+
+            <div class="product-meta">
+                <div class="meta-item">
+                    <i class="fas fa-truck"></i>
+                    <span>Free shipping & returns</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-credit-card"></i>
+                    <span>Pay in 3 installments</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Featured Collection -->
+<section class="featured-collection">
+    <div class="collection-header">
+        <h2 class="nexa-light">The Atelier Edit</h2>
+        <p>Handpicked by our creative director</p>
+    </div>
+
+    <div class="collection-grid">
+        <!-- Item 1 -->
+        <div class="collection-item">
+            <div class="collection-image" style="background-image: url('4.png')">
+                <div class="collection-overlay">
+                    <button class="collection-view">View Details</button>
+                </div>
+            </div>
+            <div class="collection-details">
+                <h3>Silk Twill Scarf</h3>
+                <p>$350</p>
+                <div class="collection-badge">Exclusive</div>
+            </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="collection-item">
+            <div class="collection-image" style="background-image: url('1.png')">
+                <div class="collection-overlay">
+                    <button class="collection-view">View Details</button>
+                </div>
+            </div>
+            <div class="collection-details">
+                <h3>Cashmere Blazer</h3>
+                <p>$1,290</p>
+                <div class="collection-badge">Limited</div>
+            </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="collection-item">
+            <div class="collection-image" style="background-image: url('6.png')">
+                <div class="collection-overlay">
+                    <button class="collection-view">View Details</button>
+                </div>
+            </div>
+            <div class="collection-details">
+                <h3>Leather Tote</h3>
+                <p>$890</p>
+                <div class="collection-badge">New</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="collection-modal" id="collectionModal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+        <button class="close-modal">&times;</button>
+        <div class="modal-image" style="background-image: url('featured-1.jpg')"></div>
+        <div class="modal-info">
+            <h2>Product Title</h2>
+            <p class="price">$0.00</p>
+            <p class="description">Product description will appear here with details about materials and craftsmanship.</p>
+            <button class="shop-now">Shop This Item</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- Reuse your existing footer -->
+<footer-component></footer-component>
+
+<script src="components.js" defer></script>
+
+<script src="shop.js"></script>
+</body>
+</html>

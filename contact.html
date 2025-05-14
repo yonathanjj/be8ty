@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | BeCity</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro" rel="stylesheet">
+</head>
+<body class="contact-page">
+<!-- Navbar (Same as before) -->
+<navbar-component></navbar-component>
+
+<main>
+    <!-- Hero with subtle parallax -->
+    <section class="contact-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Contact BeCity</h1>
+            <p class="hero-subtitle">Personalized assistance for our discerning clients</p>
+        </div>
+    </section>
+
+    <!-- Contact Grid -->
+    <div class="contact-grid">
+        <!-- Left Column - Form -->
+        <div class="contact-form-container">
+            <h2 class="section-title">Send Us a Message</h2>
+            <form id="contactForm" class="luxury-form">
+                <div class="form-group">
+                    <input type="text" id="name" required>
+                    <label for="name">Full Name</label>
+                    <div class="underline"></div>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" id="email" required>
+                    <label for="email">Email Address</label>
+                    <div class="underline"></div>
+                </div>
+
+                <div class="form-group">
+                    <select id="subject" required>
+                        <option value="" disabled selected></option>
+                        <option value="personal">Personal Styling</option>
+                        <option value="order">Order Inquiry</option>
+                        <option value="press">Press & Collaboration</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <label for="subject">Subject</label>
+                    <div class="underline"></div>
+                </div>
+
+                <div class="form-group">
+                    <textarea id="message" rows="4" required></textarea>
+                    <label for="message">Your Message</label>
+                    <div class="underline"></div>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <span>Submit</span>
+                    <div class="arrow-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </button>
+            </form>
+        </div>
+
+        <!-- Right Column - Info -->
+        <div class="contact-info-container">
+            <div class="info-section">
+                <h3 class="info-title">Client Services</h3>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>By Phone</h4>
+                        <p>+1 (888) 555-0000</p>
+                        <p class="hours">Monday to Friday, 9AM - 6PM EST</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>By Email</h4>
+                        <p>clientservices@becity.com</p>
+                        <p class="hours">Response within 24 hours</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h3 class="info-title">Appointments</h3>
+                <p class="appointment-text">Visit our flagship boutiques for private consultations with our stylists.</p>
+                <a href="#" class="boutique-btn">
+                    <span>Find a Boutique</span>
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
+
+            <div class="social-section">
+                <h3 class="info-title">Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="WeChat"><i class="fab fa-weixin"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Map Section -->
+    <div class="map-section">
+        <div class="map-container" id="map"></div>
+        <div class="map-overlay">
+            <h3>Flagship Boutique</h3>
+            <p>456 Luxury Avenue<br>New York, NY 10001</p>
+            <a href="#" class="directions-link">Get Directions <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</main>
+
+<!-- Footer (Same as before) -->
+<footer-component></footer-component>
+
+<script src="contact.js"></script>
+<script src="components.js" defer></script>
+
+<!-- For map functionality you'd include Google Maps API -->
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</body>
+</html>

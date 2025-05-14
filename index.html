@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeCity</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<navbar-component></navbar-component>
+
+<main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Weaving our DNA <span>one thread</span> at a time</h1>
+        </div>
+        <div class="hero-media">
+            <div class="hero-image left-image"></div>
+            <div class="hero-video right-video">
+                <video autoplay muted loop playsinline>
+                    <source src="h1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Products Gallery -->
+    <section class="products">
+        <h2 class="section-title">Our Collections</h2>
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-image img1"></div>
+                <div class="product-info">
+                    <h3>Classic Wool Coat</h3>
+                    <p>$249.00</p>
+                    <button class="view-btn">Quick View</button>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-image img2"></div>
+                <div class="product-info">
+                    <h3>Silk Evening Dress</h3>
+                    <p>$189.00</p>
+                    <button class="view-btn">Quick View</button>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-image img3"></div>
+                <div class="product-info">
+                    <h3>Linen Shirt</h3>
+                    <p>$79.00</p>
+                    <button class="view-btn">Quick View</button>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-image img4"></div>
+                <div class="product-info">
+                    <h3>Denim Jacket</h3>
+                    <p>$129.00</p>
+                    <button class="view-btn">Quick View</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about">
+        <div class="about-content">
+            <h2 class="section-title">Crafting Stories Through Fabric</h2>
+            <p class="about-text">At BeCity, we don't just create clothing - we weave narratives. Each piece in our collection is a chapter in our ongoing story of craftsmanship, sustainability, and timeless design.</p>
+            <p class="about-text">Founded in 2015, our atelier combines traditional techniques with contemporary vision, resulting in garments that speak to both heritage and innovation.</p>
+            <a href="about.html" class="about-btn">Discover Our Journey</a>
+        </div>
+    </section>
+</main>
+
+<!-- Product Modal -->
+<div class="modal" id="productModal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-image"></div>
+        <div class="modal-info">
+            <h2 class="modal-title">Product Name</h2>
+            <p class="modal-price">$0.00</p>
+            <p class="modal-desc">Product description goes here with all the details about materials, sizing, and care instructions.</p>
+            <div class="size-selector">
+                <span>XS</span>
+                <span>S</span>
+                <span>M</span>
+                <span>L</span>
+                <span>XL</span>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+<footer-component></footer-component>
+<script src="components.js" defer></script>
+
+<script src="home.js"></script>
+</body>
+</html>

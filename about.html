@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | BeCity</title>
+  <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/nexa" rel="stylesheet">
+</head>
+<body>
+<!-- Navbar (Same as homepage) -->
+<navbar-component></navbar-component>
+
+<main>
+  <!-- Hero with parallax effect -->
+  <section class="about-hero">
+    <video autoplay muted loop playsinline class="background-video">
+      <source src="a1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="nexa-light">The Be8ty Ethos</h1>
+      <p class="hero-subtitle">Where craftsmanship meets conscious luxury</p>
+    </div>
+  </section>
+
+
+  <!-- Philosophy Section -->
+  <section class="philosophy-section">
+    <div class="philosophy-content">
+      <div class="philosophy-text">
+        <h2 class="section-title">Redefining Modern Luxury</h2>
+        <p class="philosophy-description">Born in Barcelona in 2015, BeCity emerged from a desire to create clothing that respects both people and planet. Each piece is designed to last beyond seasons, crafted from innovative sustainable materials by artisans paid fair living wages.</p>
+        <div class="signature-block">
+          <img src="8.png" alt="Founder's Signature" class="signature">
+          <p class="founder-title">Alina Vasquez, Creative Director</p>
+        </div>
+      </div>
+      <div class="philosophy-image"></div>
+    </div>
+    <div class="philosophy-stats">
+      <div class="stat-item">
+        <span class="stat-number">100%</span>
+        <span class="stat-label">Organic Materials</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">24</span>
+        <span class="stat-label">Master Artisans</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">83%</span>
+        <span class="stat-label">Water Reduction</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Craftsmanship Showcase -->
+  <section class="craftsmanship-section">
+    <h2 class="section-title center">The Art of Making</h2>
+    <div class="craftsmanship-grid">
+      <div class="craft-item">
+        <div class="craft-image" style="background-image: url('3.png')"></div>
+        <div class="craft-details">
+          <h3>Material Sourcing</h3>
+          <p>We work directly with organic cotton farms in Peru and silk producers in Vietnam, ensuring full transparency from field to fabric.</p>
+        </div>
+      </div>
+      <div class="craft-item">
+        <div class="craft-image" style="background-image: url('5.png')"></div>
+        <div class="craft-details">
+          <h3>Atelier Production</h3>
+          <p>Each garment passes through 12 pairs of hands in our Barcelona atelier, where traditional techniques meet modern innovation.</p>
+        </div>
+      </div>
+      <div class="craft-item">
+        <div class="craft-image" style="background-image: url('7.png')"></div>
+        <div class="craft-details">
+          <h3>Quality Assurance</h3>
+          <p>Every piece undergoes rigorous quality checks before leaving our studio, with a lifetime repair guarantee.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sustainability Commitment -->
+  <section class="sustainability-section">
+    <div class="sustainability-content">
+      <h2 class="section-title white">Our Sustainability Pledge</h2>
+      <div class="pledge-item">
+        <i class="fas fa-leaf"></i>
+        <div>
+          <h3>Carbon Neutral by 2025</h3>
+          <p>We're investing in renewable energy and reforestation to offset our entire supply chain emissions.</p>
+        </div>
+      </div>
+      <div class="pledge-item">
+        <i class="fas fa-water"></i>
+        <div>
+          <h3>Closed-Loop Water System</h3>
+          <p>Our innovative dye process recycles 95% of water used, setting new industry standards.</p>
+        </div>
+      </div>
+      <div class="pledge-item">
+        <i class="fas fa-tshirt"></i>
+        <div>
+          <h3>Circular Design</h3>
+          <p>All garments are designed for disassembly, with take-back programs for end-of-life recycling.</p>
+        </div>
+      </div>
+    </div>
+    <div class="sustainability-image"></div>
+  </section>
+
+
+  <!-- CTA Section -->
+  <section class="about-cta">
+    <video autoplay muted loop playsinline class="cta-background-video">
+      <source src="a2.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="cta-overlay"></div>
+    <div class="cta-content">
+      <h2 class="nexa-light">Experience Be8ty</h2>
+      <p>Visit our flagship atelier or connect with a personal stylist to discover pieces made for your lifestyle.</p>
+      <div class="cta-buttons">
+        <a href="#" class="cta-button black">Book a Tour</a>
+        <a href="#" class="cta-button white">Contact Stylist</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Reuse your existing footer -->
+<footer-component></footer-component>
+
+<script src="components.js" defer></script>
+
+<script src="about.js"></script>
+</body>
+</html>

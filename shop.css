@@ -1,0 +1,693 @@
+/* Luxury Shop Page Styles */
+.shop-page {
+    background-color: #f9f5f2;
+    color: #1a1a1a;
+}
+
+/* Hero */
+.shop-hero {
+    height: 50vh;
+    background: url('8.png') center/cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 4rem;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+}
+
+.shop-hero h1 {
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 300;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.shop-hero p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+    opacity: 0.9;
+    position: relative;
+    z-index: 2;
+}
+
+/* Filter Bar */
+.filter-bar {
+    max-width: 1400px;
+    margin: 0 auto 3rem;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.filter-btn {
+    background: transparent;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    position: relative;
+    color: #666;
+    transition: all 0.3s ease;
+}
+
+.filter-btn::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 1rem;
+    width: calc(100% - 2rem);
+    height: 1px;
+    background: #1a1a1a;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    color: #1a1a1a;
+}
+
+.filter-btn.active::after {
+    transform: scaleX(1);
+}
+
+.luxury-select {
+    background: transparent;
+    border: 1px solid #d9d9d9;
+    padding: 0.5rem 1rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    appearance: none;
+    background: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>") no-repeat;
+    background-position: right 0.5rem center;
+    padding-right: 2rem;
+}
+
+/* Product Grid */
+.product-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.product-image {
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #1a1a1a;
+    color: #fff;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+}
+
+.quick-view {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    background: rgba(255,255,255,0.9);
+    border: none;
+    padding: 1rem;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: bottom 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.product-card:hover .quick-view {
+    bottom: 0;
+}
+
+.product-info h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+}
+
+.color-options {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.color-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid #eee;
+    cursor: pointer;
+}
+
+/* Product Modal */
+.product-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: none;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    position: relative;
+    max-width: 1200px;
+    height: 80vh;
+    margin: 5vh auto;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.modal-gallery {
+    position: relative;
+    height: 100%;
+}
+
+.main-image {
+    height: 80%;
+    background-size: cover;
+    background-position: center;
+}
+
+.thumbnail-container {
+    height: 20%;
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.thumbnail.active {
+    border-color: #1a1a1a;
+}
+
+.modal-details {
+    padding: 3rem;
+    overflow-y: auto;
+}
+
+.modal-details h2 {
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.description {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.size-selector, .color-selector, .quantity-selector {
+    margin-bottom: 2rem;
+}
+
+.size-selector h4, .color-selector h4, .quantity-selector h4 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.sizes {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.size {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d9d9d9;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.size.active {
+    border-color: #1a1a1a;
+    background: #1a1a1a;
+    color: #fff;
+}
+
+.size-guide {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    color: #666;
+    text-decoration: underline;
+}
+
+.colors {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.color {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #eee;
+    cursor: pointer;
+    position: relative;
+}
+
+.color.active::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 1px solid #1a1a1a;
+    border-radius: 50%;
+}
+
+.qty-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.qty-minus, .qty-plus {
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: 1px solid #d9d9d9;
+    cursor: pointer;
+}
+
+.qty {
+    width: 30px;
+    text-align: center;
+}
+
+.add-to-bag {
+    width: 100%;
+    padding: 1rem;
+    background: #1a1a1a;
+    color: #fff;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.add-to-bag:hover {
+    background: #333;
+}
+
+.wishlist-btn {
+    width: 100%;
+    padding: 1rem;
+    background: transparent;
+    border: 1px solid #d9d9d9;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.wishlist-btn:hover {
+    border-color: #1a1a1a;
+}
+
+.product-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .modal-content {
+        grid-template-columns: 1fr;
+        height: 90vh;
+        margin: 5vh auto;
+    }
+
+    .modal-gallery {
+        height: 50%;
+    }
+
+    .modal-details {
+        height: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .shop-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .filter-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .product-image {
+        height: 300px;
+    }
+}
+
+
+
+
+/* Featured Collection */
+.featured-collection {
+    max-width: 1400px;
+    margin: 6rem auto;
+    padding: 0 2rem;
+}
+
+.collection-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.collection-header h2 {
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+
+.collection-header p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #666;
+}
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.collection-item {
+    position: relative;
+}
+
+.collection-image {
+    height: 450px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.collection-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.collection-item:hover .collection-overlay {
+    opacity: 1;
+}
+
+.collection-view {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.collection-view:hover {
+    background: white;
+    color: #1a1a1a;
+}
+
+.collection-details {
+    text-align: center;
+}
+
+.collection-details h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.collection-details p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+}
+
+.collection-badge {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    padding: 0.2rem 0.8rem;
+    background: #f5f5f5;
+    color: #1a1a1a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .collection-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .collection-image {
+        height: 350px;
+    }
+}
+
+
+/* Collection Modal */
+.collection-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.collection-modal .modal-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(5px);
+}
+
+.collection-modal .modal-content {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    z-index: 2;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.collection-modal .close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.collection-modal .modal-image {
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+}
+
+.collection-modal .modal-info {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.collection-modal h2 {
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.collection-modal .price {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.collection-modal .description {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.collection-modal .shop-now {
+    background: #1a1a1a;
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    align-self: flex-start;
+}
+
+.collection-modal .shop-now:hover {
+    background: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .collection-modal .modal-content {
+        grid-template-columns: 1fr;
+        width: 90%;
+    }
+
+    .collection-modal .modal-image {
+        height: 300px;
+    }
+}
